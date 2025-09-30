@@ -3,6 +3,10 @@
 A React + TypeScript application that lists Chess Grandmasters (from Chess.com’s public API
 ) with detailed profile modals, pagination, search, filtering, and light/dark themes.
 
+🚀 Live Demo
+
+👉 [View Demo](https://chessgm-wiki-by-art.netlify.app/)
+
 ✨ Features
 
 📋 Grandmasters List: Paginated (25 per page), searchable, and filterable by country.
