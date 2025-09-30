@@ -1,4 +1,3 @@
-import React from "react";
 import { countryCodeToFlag } from "../utils/flags";
 import { useClock } from "../utils/useClock";
 

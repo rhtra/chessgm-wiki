@@ -56,7 +56,8 @@ export default function GrandmastersList() {
           ),
         ])
           .then(async ([profile, stats]) => {
-            let countryName, countryCode;
+            let countryName: string | undefined;
+            let countryCode: string | undefined;
             if (profile.country) {
               try {
                 const res = await fetch(profile.country);
