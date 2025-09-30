@@ -39,7 +39,7 @@ Dropdown, Pagination, SearchBar, GrandmasterModal, and GrandmastersList
 
 Clone the repo:
 
-git clone https://github.com/<your-username>/gm-wiki.git
+git clone https://github.com/rhtra/chessgm-wiki.git
 cd gm-wiki
 
 
