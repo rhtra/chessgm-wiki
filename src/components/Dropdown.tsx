@@ -12,19 +12,18 @@ type Props = {
   onOrderChange?: (order: "asc" | "desc") => void;
 };
 
-export default function Dropdown({
-  label,
-  value,
-  options,
-  onChange,
-  order,
-  onOrderChange,
-}: Props) {
+export default function Dropdown({ label, value, options, onChange, order, onOrderChange }: Props) {
+  const id = `dropdown-${label.replace(/\s+/g, "-").toLowerCase()}`;
+
   return (
     <div className="dropdown">
-      <label className="dropdown-label">{label}:</label>
+      {/* ✅ associate label with select */}
+      <label htmlFor={id} className="dropdown-label">
+        {label}:
+      </label>
       <div className="dropdown-control">
         <select
+          id={id}  // ✅ link
           className="dropdown-select"
           value={value}
           onChange={(e) => onChange(e.target.value)}
@@ -48,3 +47,4 @@ export default function Dropdown({
     </div>
   );
 }
+

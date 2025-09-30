@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`GrandmastersList snapshot matches snapshot after players load 1`] = `
+<DocumentFragment>
+  <section>
+    <h1>
+      Grandmasters
+    </h1>
+    <div
+      class="filters"
+    >
+      <div
+        class="dropdown"
+      >
+        <label
+          class="dropdown-label"
+          for="dropdown-sort-by"
+        >
+          Sort by:
+        </label>
+        <div
+          class="dropdown-control"
+        >
+          <select
+            class="dropdown-select"
+            id="dropdown-sort-by"
+          >
+            <option
+              value="username"
+            >
+              Username
+            </option>
+            <option
+              value="firstName"
+            >
+              First Name
+            </option>
+            <option
+              value="lastName"
+            >
+              Last Name
+            </option>
+          </select>
+          <button
+            class="order-btn"
+            type="button"
+          >
+            ↑
+          </button>
+        </div>
+      </div>
+      <div
+        class="dropdown"
+      >
+        <label
+          class="dropdown-label"
+          for="dropdown-country"
+        >
+          Country:
+        </label>
+        <div
+          class="dropdown-control"
+        >
+          <select
+            class="dropdown-select"
+            id="dropdown-country"
+          >
+            <option
+              value="All"
+            >
+              All
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div
+      class="toolbar"
+    >
+      <input
+        class="input"
+        placeholder="Search username…"
+        value=""
+      />
+    </div>
+    <ul
+      class="gm-list"
+    />
+  </section>
+</DocumentFragment>
+`;

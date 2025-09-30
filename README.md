@@ -1,73 +1,138 @@
-# React + TypeScript + Vite
+♟️ GM Wiki
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + TypeScript application that lists Chess Grandmasters (from Chess.com’s public API
+) with detailed profile modals, pagination, search, filtering, and light/dark themes.
 
-Currently, two official plugins are available:
+✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+📋 Grandmasters List: Paginated (25 per page), searchable, and filterable by country.
 
-## React Compiler
+🧑‍💼 Profile Modal: Click on a Grandmaster to view details such as:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Name, username, avatar, country flag
 
-## Expanding the ESLint configuration
+Joined date, last online, status
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+FIDE rating
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+League, verified, streamer info
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Time since last online (auto-updating HH:MM:SS clock)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+🎨 Tournament Theme: SCSS-based styling with responsive design.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+🌗 Dark/Light Theme Toggle: Global theming with persistence.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+📱 Mobile Responsive: Optimized layout for smaller devices.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+✅ Jest + React Testing Library: Unit tests + snapshot tests for:
+
+Dropdown, Pagination, SearchBar, GrandmasterModal, and GrandmastersList
+
+🛠 TypeScript: Strong typing for reliability and clarity.
+
+🛠️ Installation
+
+Clone the repo:
+
+git clone https://github.com/<your-username>/gm-wiki.git
+cd gm-wiki
+
+
+Install dependencies:
+
+npm install
+
+
+Start the dev server:
+
+npm run dev
+
+
+Build for production:
+
+npm run build
+
+
+Preview production build:
+
+npm run preview
+
+🎨 Styling
+
+Uses SCSS modules under src/styles/
+
+Global theme variables for light/dark mode
+
+Tournament-style cards and layout
+
+Mobile-first responsive design
+
+🌗 Dark Mode
+
+Toggle available in the header.
+Theme preference is saved to localStorage.
+
+✅ Testing
+
+We use Jest + React Testing Library.
+
+Run all tests:
+
+npm test
+
+
+Update snapshots:
+
+npm test -- -u
+
+
+Test files are located under:
+
+src/components/__tests__/
+
+src/pages/__tests__/
+
+Included tests
+
+Dropdown: rendering, snapshot, order toggling
+
+Pagination: navigation between pages
+
+SearchBar: filtering results
+
+GrandmasterModal: player details, modal close, snapshots (clock and date are mocked for stability)
+
+GrandmastersList: integration snapshot with mocked Chess.com API
+
+📡 API Endpoints Used
+
+List Grandmasters:
+https://api.chess.com/pub/titled/GM
+
+Player Profile:
+https://api.chess.com/pub/player/{username}
+
+Player Stats (FIDE rating):
+https://api.chess.com/pub/player/{username}/stats
+
+Country Info:
+https://api.chess.com/pub/country/{code}
+
+📂 Project Structure
+src/
+  components/
+    Dropdown.tsx
+    Pagination.tsx
+    SearchBar.tsx
+    GrandmasterModal.tsx
+  pages/
+    GrandmastersList.tsx
+  styles/
+    _variables.scss
+    _cards.scss
+    _layout.scss
+  utils/
+    useClock.ts
+  __tests__/
+    (unit + snapshot tests)

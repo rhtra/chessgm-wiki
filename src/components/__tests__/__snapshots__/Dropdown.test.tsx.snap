@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Dropdown snapshots matches snapshot (default) 1`] = `
+<DocumentFragment>
+  <div
+    class="dropdown"
+  >
+    <label
+      class="dropdown-label"
+      for="dropdown-sort-by"
+    >
+      Sort by:
+    </label>
+    <div
+      class="dropdown-control"
+    >
+      <select
+        class="dropdown-select"
+        id="dropdown-sort-by"
+      >
+        <option
+          value="username"
+        >
+          Username
+        </option>
+        <option
+          value="firstName"
+        >
+          First Name
+        </option>
+        <option
+          value="lastName"
+        >
+          Last Name
+        </option>
+      </select>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Dropdown snapshots matches snapshot with order toggle 1`] = `
+<DocumentFragment>
+  <div
+    class="dropdown"
+  >
+    <label
+      class="dropdown-label"
+      for="dropdown-sort-by"
+    >
+      Sort by:
+    </label>
+    <div
+      class="dropdown-control"
+    >
+      <select
+        class="dropdown-select"
+        id="dropdown-sort-by"
+      >
+        <option
+          value="username"
+        >
+          Username
+        </option>
+        <option
+          value="firstName"
+        >
+          First Name
+        </option>
+        <option
+          value="lastName"
+        >
+          Last Name
+        </option>
+      </select>
+      <button
+        class="order-btn"
+        type="button"
+      >
+        ↑
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;

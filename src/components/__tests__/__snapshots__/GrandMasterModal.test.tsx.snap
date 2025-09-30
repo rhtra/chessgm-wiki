@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`GrandmasterModal snapshots matches snapshot with player info 1`] = `
+<DocumentFragment>
+  <div
+    class="modal-backdrop"
+  >
+    <div
+      class="modal"
+    >
+      <button
+        class="close-btn"
+      >
+        ✕
+      </button>
+      <img
+        alt="testgm"
+        class="modal-avatar"
+        src="https://ui-avatars.com/api/?name=testgm&background=000&color=fff"
+      />
+      <h2>
+        GM Test GM 
+        <span
+          class="username"
+        >
+          (testgm)
+        </span>
+      </h2>
+      <p>
+        Country: 🇳🇴 Norway
+      </p>
+      <p>
+        Status: basic
+      </p>
+      <p>
+        Verified: ✅ Yes
+      </p>
+      <p>
+        Streamer: No
+      </p>
+      <p>
+        League: champions
+      </p>
+      <p>
+        Joined: 9/13/2020
+      </p>
+      <p>
+        Last Online: 9/30/2025, 8:53:00 PM
+      </p>
+      <p>
+        Time since last online: 01:00:00
+      </p>
+      <p>
+        Rating: 2800
+      </p>
+      <a
+        class="btn"
+        href="https://www.chess.com/member/testgm"
+        rel="noreferrer"
+        target="_blank"
+      >
+        Open Chess.com profile
+      </a>
+    </div>
+  </div>
+</DocumentFragment>
+`;
