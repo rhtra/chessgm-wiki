@@ -1,0 +1,50 @@
+.profile {
+    display: grid;
+    grid-template-columns: 128px 1fr;
+    gap: 1rem;
+  
+    @include respond-sm {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  
+    .avatar {
+      width: 128px;
+      height: 128px;
+      border-radius: 12px;
+      object-fit: cover;
+      background: $color-card-light;
+  
+      body.dark & {
+        background: $color-card-dark;
+      }
+  
+      @include respond-sm {
+        margin: 0 auto;
+      }
+    }
+  
+    .profile-main {
+      @include flex-col;
+      gap: 0.5rem;
+  
+      .details {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        gap: 0.25rem 0.75rem;
+  
+        dt {
+          color: $color-muted-light;
+  
+          body.dark & {
+            color: $color-muted-dark;
+          }
+        }
+  
+        dd {
+          margin: 0;
+        }
+      }
+    }
+  }
+  

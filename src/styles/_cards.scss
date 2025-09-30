@@ -1,0 +1,88 @@
+.gm-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .tournament-card {
+    display: flex;
+    align-items: flex-start;
+    background: $color-card-light;
+    border: 1px solid $color-border-light;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    gap: 1rem;
+    transition: background 0.2s;
+  
+    &:hover {
+      background: lighten($color-card-light, 5%);
+    }
+  
+    body.dark & {
+      background: $color-card-dark;
+      border-color: $color-border-dark;
+  
+      &:hover {
+        background: lighten($color-card-dark, 5%);
+      }
+    }
+  
+    .gm-photo {
+      width: 96px;
+      height: 96px;
+      border-radius: 0.5rem;
+      object-fit: cover;
+      background: #000;
+    }
+  
+    .gm-details {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+  
+      h2 {
+        margin: 0;
+        font-size: 1.25rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+  
+      .gm-badge {
+        background: #d22;
+        color: #fff;
+        font-weight: 700;
+        padding: 0.2rem 0.4rem;
+        border-radius: 0.25rem;
+        font-size: 0.85rem;
+      }
+  
+      .bio {
+        font-size: 0.9rem;
+        color: $color-muted-light;
+  
+        body.dark & {
+          color: $color-muted-dark;
+        }
+      }
+  
+      .btn {
+        align-self: flex-start;
+        margin-top: 0.5rem;
+      }
+    }
+  }
+  
+  .username {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: $color-muted-light;
+  
+    body.dark & {
+      color: $color-muted-dark;
+    }
+  }

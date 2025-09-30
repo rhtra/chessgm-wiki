@@ -1,0 +1,19 @@
+.panel {
+    border: 1px solid $color-border-light;
+    border-radius: $radius;
+    padding: 1rem;
+    background: $color-card-light;
+    color: $color-text-light;
+  
+    &.error {
+      border-color: $error-color;
+      color: $error-color;
+    }
+  
+    body.dark & {
+      border-color: $color-border-dark;
+      background: $color-card-dark;
+      color: $color-text-dark;
+    }
+  }
+  

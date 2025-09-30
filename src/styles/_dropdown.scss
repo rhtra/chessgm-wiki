@@ -1,0 +1,66 @@
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  
+    .dropdown-label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: $color-text-light;
+  
+      body.dark & {
+        color: $color-text-dark;
+      }
+    }
+  
+    .dropdown-control {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  
+    .dropdown-select {
+      padding: 0.5rem 0.75rem;
+      border: 1px solid $color-border-light;
+      border-radius: 0.5rem;
+      background: $color-card-light;
+      color: $color-text-light;
+      font-size: 0.95rem;
+      font-weight: 500;
+  
+      &:hover {
+        border-color: $color-gold;
+      }
+  
+      body.dark & {
+        border-color: $color-border-dark;
+        background: $color-card-dark;
+        color: $color-text-dark;
+      }
+    }
+  
+    .order-btn {
+      background: $color-link-light;
+      color: #fff;
+      border: none;
+      border-radius: 0.5rem;
+      padding: 0.4rem 0.6rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+  
+      &:hover {
+        background: darken($color-link-light, 8%);
+      }
+  
+      body.dark & {
+        background: $color-gold;
+        color: #000;
+  
+        &:hover {
+          background: lighten($color-gold, 10%);
+        }
+      }
+    }
+  }
+  

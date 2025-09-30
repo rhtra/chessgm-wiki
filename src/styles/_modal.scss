@@ -1,0 +1,68 @@
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999; // ensure it’s above everything
+  }
+  
+.modal {
+    background: $color-card-light;
+    border: 1px solid $color-border-light;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    color: $color-text-light;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+    text-align: center;
+  
+    body.dark & {
+      background: $color-card-dark;
+      border-color: $color-border-dark;
+      color: $color-text-dark;
+    }
+  
+    h2 {
+      margin-bottom: 1rem;
+      color: $color-gold;
+    }
+  
+    .modal-avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid $color-gold;
+      margin-bottom: 1rem;
+    }
+  
+    .btn {
+      margin-top: 1rem;
+    }
+}
+  
+.close-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    color: inherit;
+    cursor: pointer;
+}
+
+.username {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: $color-muted-light;
+  
+    body.dark & {
+      color: $color-muted-dark;
+    }
+}
+  
+  
